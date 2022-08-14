@@ -20,5 +20,6 @@ no-unload = []
 
 [dependencies]
 notify = "4.0.*"
+derivative = "*"
 libloading = "0.7.*"
 tempdir = "0.3"
