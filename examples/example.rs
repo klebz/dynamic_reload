@@ -67,7 +67,7 @@ fn main() {
             reload_handler.update(&Plugins::reload_callback, &mut plugs);
         }
 
-        if plugs.plugins.len() > 0 {
+        if !plugs.plugins.is_empty() {
             // In a real program you want to cache the symbol and not do it every time if your
             // application is performance critical
             let fun: Symbol<extern "C" fn() -> i32> =

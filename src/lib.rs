@@ -60,6 +60,7 @@ use std::{
 };
 
 pub use libloading::Symbol;
+pub use libloading;
 use tempdir::TempDir;
 
 #[cfg(test)] mod tests;
