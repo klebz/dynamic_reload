@@ -91,12 +91,17 @@ pub struct Lib {
     pub original_path: Option<PathBuf>,
 }
 
+use derivative::Derivative;
+
 /// Contains information about loaded libraries
 /// and also tracks search paths and reloading
 /// events.
+#[derive(Derivative)]
+#[derivative(Debug)]
 pub struct DynamicReload {
     libs:          Vec<Arc<Lib>>,
 
+    #[derivative(Debug="ignore")]
     watcher:       Option<RecommendedWatcher>,
     shadow_dir:    Option<TempDir>,
     search_paths:  Vec<PathBuf>,
